@@ -15,7 +15,7 @@ const hStackVariants = cva("flex flex-wrap items-center", {
       },
       align: {
          default: "items-stretch",
-         center: "items items-center",
+         center: "items-center",
          start: "items-start",
          end: "items-end",
          baseline: "items-baseline",
