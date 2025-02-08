@@ -1,6 +1,8 @@
 import { Icons } from "@/assets/icons";
 import { AnimationContainer } from "@/components/global";
+import { HStack } from "@/components/ui/h-stack";
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
+import { VStack } from "@/components/ui/v-stack";
 import type { FCC } from "@/types";
 import Link from "next/link";
 
@@ -11,13 +13,22 @@ const Footer: FCC = () => {
 
          <div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8">
             <AnimationContainer delay={0.1}>
-               <div className="flex flex-col items-start justify-start md:max-w-[200px]">
-                  <div className="flex items-start">
+               <VStack
+                  align={"start"}
+                  justify={"start"}
+                  spacing={"none"}
+                  className="md:max-w-[200px]"
+               >
+                  <HStack
+                     noWrap
+                     align={"start"}
+                     spacing={"none"}
+                  >
                      <Icons.cat
                         width={28}
                         height={28}
                      />
-                  </div>
+                  </HStack>
                   <p className="mt-4 text-start text-muted-foreground text-sm">
                      Create your content with ease.
                   </p>
@@ -30,7 +41,12 @@ const Footer: FCC = () => {
                         Jacob
                      </Link>
                   </span>
-                  <div className="flex items-center gap-1 pt-2 text-muted-foreground">
+                  <HStack
+                     noWrap
+                     align={"center"}
+                     spacing={4}
+                     className="pt-2 text-muted-foreground"
+                  >
                      <Link
                         href="/"
                         target="_blank"
@@ -49,8 +65,8 @@ const Footer: FCC = () => {
                            className=" !fill-white hover:text-white"
                         />
                      </Link>
-                  </div>
-               </div>
+                  </HStack>
+               </VStack>
             </AnimationContainer>
 
             <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
@@ -97,7 +113,10 @@ const Footer: FCC = () => {
                      </div>
                   </AnimationContainer>
                   <AnimationContainer delay={0.3}>
-                     <div className="mt-10 flex flex-col md:mt-0">
+                     <VStack
+                        spacing={"none"}
+                        className="mt-10 md:mt-0"
+                     >
                         <h3 className="font-medium text-base text-white">
                            Integrations
                         </h3>
@@ -135,12 +154,12 @@ const Footer: FCC = () => {
                               </Link>
                            </li>
                         </ul>
-                     </div>
+                     </VStack>
                   </AnimationContainer>
                </div>
                <div className="md:grid md:grid-cols-2 md:gap-8">
                   <AnimationContainer delay={0.4}>
-                     <div className="">
+                     <div>
                         <h3 className="font-medium text-base text-white">
                            Resources
                         </h3>
@@ -165,7 +184,10 @@ const Footer: FCC = () => {
                      </div>
                   </AnimationContainer>
                   <AnimationContainer delay={0.5}>
-                     <div className="mt-10 flex flex-col md:mt-0">
+                     <VStack
+                        spacing={"none"}
+                        className="mt-10 md:mt-0"
+                     >
                         <h3 className="font-medium text-base text-white">
                            Company
                         </h3>
@@ -195,7 +217,7 @@ const Footer: FCC = () => {
                               </Link>
                            </li>
                         </ul>
-                     </div>
+                     </VStack>
                   </AnimationContainer>
                </div>
             </div>

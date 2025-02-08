@@ -69,6 +69,11 @@ export default {
             default: ["var(--font-poppins)"],
          },
          keyframes: {
+            scroll: {
+               to: {
+                  transform: "translate(calc(-50% - 0.5rem))",
+               },
+            },
             "accordion-down": {
                from: { height: "0" },
                to: { height: "var(--radix-accordion-content-height)" },
@@ -181,6 +186,8 @@ export default {
             rotate: "rotate 3s linear infinite both",
             "caret-blink": "caret-blink 1.25s ease-out infinite",
             loading: "loading 0.5s linear infinite",
+            scroll:
+               "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
          },
       },
    },

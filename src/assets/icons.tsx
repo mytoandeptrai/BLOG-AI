@@ -11,6 +11,7 @@ import noteBook from "./svg/note-book.svg";
 import qr from "./svg/qr.svg";
 import cat from "./svg/cat.svg";
 import zap from "./svg/zap.svg";
+import search from "./svg/search.svg";
 
 const IconList = {
    github,
@@ -24,6 +25,7 @@ const IconList = {
    noteBook,
    zap,
    cat,
+   search,
 };
 
 type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;
