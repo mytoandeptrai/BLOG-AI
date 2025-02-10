@@ -12,7 +12,13 @@ import qr from "./svg/qr.svg";
 import cat from "./svg/cat.svg";
 import zap from "./svg/zap.svg";
 import search from "./svg/search.svg";
-
+import calendar from "./svg/calendar.svg";
+import upload from "./svg/upload.svg";
+import scrollText from "./svg/scroll-text.svg";
+import pencil from "./svg/pencil.svg";
+import creditCard from "./svg/credit-card.svg";
+import circleCheck from "./svg/circle-check.svg";
+import star from "./svg/star.svg";
 const IconList = {
    github,
    file,
@@ -26,6 +32,13 @@ const IconList = {
    zap,
    cat,
    search,
+   calendar,
+   upload,
+   scrollText,
+   pencil,
+   creditCard,
+   circleCheck,
+   star,
 };
 
 type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;

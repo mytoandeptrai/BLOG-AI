@@ -1,16 +1,14 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import type { FCC } from "@/types";
 import { motion } from "framer-motion";
-import type React from "react";
 
-export const LampContainer = ({
-   children,
-   className,
-}: {
-   children: React.ReactNode;
+type Props = {
    className?: string;
-}) => {
+};
+
+export const LampContainer: FCC<Props> = ({ children, className }) => {
    return (
       <div
          className={cn(

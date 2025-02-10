@@ -4,10 +4,11 @@ import { buttonVariants } from "@/components/ui/button";
 import { HStack } from "@/components/ui/h-stack";
 import MagicBadge from "@/components/ui/magic-badge";
 import { VStack } from "@/components/ui/v-stack";
-import { FEATURES_LIST } from "@/config/misc";
 import { cn } from "@/lib/utils";
 import type { FCC } from "@/types";
 import Link from "next/link";
+import {} from "@/components/ui/card";
+import { FEATURES_LIST } from "@/config/misc";
 
 type Props = {};
 
@@ -34,24 +35,26 @@ const FeaturesSection: FCC<Props> = (props: Props) => {
          <AnimationContainer delay={0.2}>
             <div className="grid w-full auto-rows-[22rem] grid-cols-3 gap-4 py-8">
                {FEATURES_LIST.map((feature) => {
-                  const {
-                     Icon,
-                     background,
-                     className,
-                     cta,
-                     description,
-                     href,
-                     name,
-                  } = feature;
+                  const { Icon, background, cta, description, href, name } =
+                     feature;
+
+                  const classNameMapping = {
+                     "Blog posts": "lg:col-span-1",
+                     "Search your blogs": "lg:col-span-2",
+                     "Calendar picker": "col-span-3 lg:col-span-1",
+                     "Connect your apps":
+                        "lg:col-span-2 max-w-full overflow-hidden",
+                  };
+
                   return (
                      <VStack
                         key={name}
                         justify={"between"}
                         spacing={"none"}
                         className={cn(
-                           "group relative col-span-3 overflow-hidden rounded-xl border border-border/60",
+                           "group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl border border-border/60",
                            "bg-black [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
-                           className
+                           classNameMapping[name]
                         )}
                      >
                         <div>{background}</div>
