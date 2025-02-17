@@ -56,7 +56,12 @@ const Navbar: FCC = () => {
                            <NavigationMenuItem key={link.title}>
                               {link.menu ? (
                                  <>
-                                    <NavigationMenuTrigger>
+                                    <NavigationMenuTrigger
+                                       className={cn({
+                                          "text-muted-foreground":
+                                             pathname.includes(link.href),
+                                       })}
+                                    >
                                        {link.title}
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent>
@@ -111,7 +116,13 @@ const Navbar: FCC = () => {
                                     passHref
                                  >
                                     <NavigationMenuLink
-                                       className={navigationMenuTriggerStyle()}
+                                       className={cn(
+                                          navigationMenuTriggerStyle(),
+                                          {
+                                             "text-muted-foreground text-sm leading-snug":
+                                                pathname.includes(link.href),
+                                          }
+                                       )}
                                     >
                                        {link.title}
                                     </NavigationMenuLink>

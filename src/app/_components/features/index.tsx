@@ -52,13 +52,16 @@ const FeaturesSection: FCC<Props> = (props: Props) => {
                         justify={"between"}
                         spacing={"none"}
                         className={cn(
-                           "group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl border border-border/60",
+                           "group relative col-span-3 overflow-hidden rounded-xl border border-border/60",
                            "bg-black [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
                            classNameMapping[name]
                         )}
                      >
                         <div>{background}</div>
-                        <div className="group-hover:-translate-y-10 pointer-events-none z-10 flex flex-col gap-1 p-6 transition-all duration-300">
+                        <VStack
+                           spacing={"none"}
+                           className="group-hover:-translate-y-10 pointer-events-none z-10 gap-1 p-6 transition-all duration-300"
+                        >
                            {Icon}
                            <h3 className="font-semibold text-neutral-300 text-xl">
                               {name}
@@ -66,7 +69,7 @@ const FeaturesSection: FCC<Props> = (props: Props) => {
                            <p className="max-w-lg text-neutral-400">
                               {description}
                            </p>
-                        </div>
+                        </VStack>
                         <HStack
                            align={"center"}
                            spacing={"none"}

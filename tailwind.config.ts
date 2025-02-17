@@ -6,6 +6,7 @@ export default {
       "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
       "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
       "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+      "./src/config/**/*.{js,ts,jsx,tsx,mdx}",
    ],
    theme: {
       container: {
@@ -75,27 +76,49 @@ export default {
                },
             },
             "accordion-down": {
-               from: { height: "0" },
-               to: { height: "var(--radix-accordion-content-height)" },
+               from: {
+                  height: "0",
+               },
+               to: {
+                  height: "var(--radix-accordion-content-height)",
+               },
             },
             "accordion-up": {
-               from: { height: "var(--radix-accordion-content-height)" },
-               to: { height: "0" },
+               from: {
+                  height: "var(--radix-accordion-content-height)",
+               },
+               to: {
+                  height: "0",
+               },
             },
             grid: {
-               "0%": { transform: "translateY(-50%)" },
-               "100%": { transform: "translateY(0)" },
+               "0%": {
+                  transform: "translateY(-50%)",
+               },
+               "100%": {
+                  transform: "translateY(0)",
+               },
             },
             wiggle: {
                "0%, 100%": {
                   transform: "translateX(0%)",
                   transformOrigin: "50% 50%",
                },
-               "15%": { transform: "translateX(-4px) rotate(-4deg)" },
-               "30%": { transform: "translateX(6px) rotate(4deg)" },
-               "45%": { transform: "translateX(-6px) rotate(-2.4deg)" },
-               "60%": { transform: "translateX(2px) rotate(1.6deg)" },
-               "75%": { transform: "translateX(-1px) rotate(-0.8deg)" },
+               "15%": {
+                  transform: "translateX(-4px) rotate(-4deg)",
+               },
+               "30%": {
+                  transform: "translateX(6px) rotate(4deg)",
+               },
+               "45%": {
+                  transform: "translateX(-6px) rotate(-2.4deg)",
+               },
+               "60%": {
+                  transform: "translateX(2px) rotate(1.6deg)",
+               },
+               "75%": {
+                  transform: "translateX(-1px) rotate(-0.8deg)",
+               },
             },
             spinner: {
                "0%": {
@@ -144,8 +167,12 @@ export default {
                },
             },
             marquee: {
-               from: { transform: "translateX(0)" },
-               to: { transform: "translateX(calc(-100% - var(--gap)))" },
+               from: {
+                  transform: "translateX(0)",
+               },
+               to: {
+                  transform: "translateX(calc(-100% - var(--gap)))",
+               },
             },
             flip: {
                to: {
@@ -158,8 +185,12 @@ export default {
                },
             },
             "caret-blink": {
-               "0%,70%,100%": { opacity: "1" },
-               "20%,50%": { opacity: "0" },
+               "0%,70%,100%": {
+                  opacity: "1",
+               },
+               "20%,50%": {
+                  opacity: "0",
+               },
             },
             loading: {
                "0%": {
