@@ -6,6 +6,7 @@ import { APP_URL, siteConfig } from "@/config/site";
 import { Toaster } from "@/components/ui/sonner";
 import { Footer, Navbar } from "@/components/shared";
 import { ClerkProvider } from "@clerk/nextjs";
+
 export const metadata: Metadata = {
    title: siteConfig.name,
    description: siteConfig.description,

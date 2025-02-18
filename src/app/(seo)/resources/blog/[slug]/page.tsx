@@ -2,6 +2,21 @@ import { SAMPLE_BLOGS } from "@/app/(seo)/resources/blog/constant";
 import { AnimationContainer } from "@/components/global";
 import { VStack } from "@/components/ui/v-stack";
 import type { FCC } from "@/types";
+import type { Metadata } from "next";
+
+export function generateMetadata({
+   params,
+}: {
+   params: { slug: string };
+}): Metadata {
+   const blog = SAMPLE_BLOGS.find((blog) => blog.slug === params.slug);
+   return {
+      title: blog?.title || "Blog detail",
+      description:
+         blog?.description ||
+         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, deleniti!",
+   };
+}
 
 interface Props {
    params: {

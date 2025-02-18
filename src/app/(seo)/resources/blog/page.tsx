@@ -3,6 +3,13 @@ import { AnimationContainer, MaxWidthContainer } from "@/components/global";
 import MagicBadge from "@/components/ui/magic-badge";
 import { VStack } from "@/components/ui/v-stack";
 import type { FCC } from "@/types";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+   title: "List of blogs",
+   description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, deleniti!",
+};
 
 const BlogPage: FCC = () => {
    return (
