@@ -53,7 +53,8 @@ const Footer: FCC = () => {
                      >
                         <Icons.github
                            size={16}
-                           className=" !fill-white hover:text-white"
+                           color="#fff"
+                           className="!fill-white hover:text-white"
                         />
                      </Link>
                      <Link
