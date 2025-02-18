@@ -1,9 +1,8 @@
 import { AnimationContainer } from "@/components/global";
 import MagicBadge from "@/components/ui/magic-badge";
 import { VStack } from "@/components/ui/v-stack";
-import type { FCC } from "@/types";
 
-const HelpPage: FCC = () => {
+const HelpPage = () => {
    return (
       <AnimationContainer delay={0.1}>
          <VStack

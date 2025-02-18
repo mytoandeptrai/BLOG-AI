@@ -7,7 +7,6 @@ import { LampContainer } from "@/components/ui/lamp";
 import MagicBadge from "@/components/ui/magic-badge";
 import { VStack } from "@/components/ui/v-stack";
 import { COMPANIES_LIST } from "@/config/misc";
-import type { FCC } from "@/types";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, deleniti!",
 };
 
-const AnalyticsPage: FCC = () => {
+const AnalyticsPage = () => {
    return (
       <MaxWidthContainer>
          <AnimationContainer

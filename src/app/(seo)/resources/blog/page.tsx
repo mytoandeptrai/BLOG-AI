@@ -2,7 +2,6 @@ import { Blogs } from "./_components";
 import { AnimationContainer, MaxWidthContainer } from "@/components/global";
 import MagicBadge from "@/components/ui/magic-badge";
 import { VStack } from "@/components/ui/v-stack";
-import type { FCC } from "@/types";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, deleniti!",
 };
 
-const BlogPage: FCC = () => {
+const BlogPage = () => {
    return (
       <MaxWidthContainer>
          <AnimationContainer delay={0.1}>

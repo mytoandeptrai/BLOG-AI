@@ -1,7 +1,6 @@
 import { AnimationContainer } from "@/components/global";
 import MagicBadge from "@/components/ui/magic-badge";
 import { VStack } from "@/components/ui/v-stack";
-import type { FCC } from "@/types";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, deleniti!",
 };
 
-const EnterprisePage: FCC = () => {
+const EnterprisePage = () => {
    return (
       <AnimationContainer delay={0.1}>
          <VStack

@@ -1,15 +1,12 @@
 import { SAMPLE_BLOGS } from "@/app/(seo)/resources/blog/constant";
 import { AnimationContainer } from "@/components/global";
 import { VStack } from "@/components/ui/v-stack";
-import type { FCC } from "@/types";
-import type { Metadata } from "next";
 
-export function generateMetadata({
-   params,
-}: {
-   params: { slug: string };
-}): Metadata {
-   const blog = SAMPLE_BLOGS.find((blog) => blog.slug === params.slug);
+type Params = Promise<{ slug: string }>;
+
+export async function generateMetadata({ params }: { params: Params }) {
+   const { slug } = await params;
+   const blog = SAMPLE_BLOGS.find((blog) => blog.slug === slug);
    return {
       title: blog?.title || "Blog detail",
       description:
@@ -19,13 +16,12 @@ export function generateMetadata({
 }
 
 interface Props {
-   params: {
-      slug: string;
-   };
+   params: Params;
 }
 
-const BlogPage: FCC<Props> = ({ params }) => {
-   const blog = SAMPLE_BLOGS.find((blog) => blog.slug === params.slug);
+const BlogPage = async ({ params }: Props) => {
+   const { slug } = await params;
+   const blog = SAMPLE_BLOGS.find((blog) => blog.slug === slug);
    return (
       <VStack
          align={"center"}
