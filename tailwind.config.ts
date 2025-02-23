@@ -7,6 +7,7 @@ export default {
       "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
       "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
       "./src/config/**/*.{js,ts,jsx,tsx,mdx}",
+      "./src/providers/**/*.{js,ts,jsx,tsx,mdx}",
    ],
    theme: {
       container: {
@@ -70,6 +71,14 @@ export default {
             default: ["var(--font-poppins)"],
          },
          keyframes: {
+            slideLeftToRight: {
+               "0%": {
+                  transform: "translateX(-100%)",
+               },
+               "100%": {
+                  transform: "translateX(0)",
+               },
+            },
             scroll: {
                to: {
                   transform: "translate(calc(-50% - 0.5rem))",
@@ -217,6 +226,7 @@ export default {
             rotate: "rotate 3s linear infinite both",
             "caret-blink": "caret-blink 1.25s ease-out infinite",
             loading: "loading 0.5s linear infinite",
+            "slide-left-right": "slideLeftToRight 3s ease-in-out forwards",
             scroll:
                "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
          },
