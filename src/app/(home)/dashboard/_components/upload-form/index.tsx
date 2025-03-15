@@ -1,11 +1,13 @@
 "use client";
 
-import { onTranscribeFile } from "@/actions/upload-action";
+import { onGenerateBlogPostAction } from "@/actions/post-action";
+import { onTranscribeFileWithGemini } from "@/actions/upload-action";
 import schema from "@/app/(home)/dashboard/_components/upload-form/schema";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import MagicBadge from "@/components/ui/magic-badge";
-import { useUploadThing } from "@/utils/uploadthing";
+import { useUser } from "@clerk/nextjs";
+import { useTransition } from "react";
 import { toast } from "sonner";
 
 type Props = {
@@ -13,20 +15,8 @@ type Props = {
 };
 
 const UploadForm = ({ planTypeName }: Props) => {
-   const { startUpload, isUploading, routeConfig } = useUploadThing(
-      "videoOrAudioUploader",
-      {
-         onClientUploadComplete: () => {
-            toast("uploaded successfully!");
-         },
-         onUploadError: (err) => {
-            console.error("Error occurred", err);
-         },
-         onUploadBegin: () => {
-            toast("Upload has begun 🚀!");
-         },
-      }
-   );
+   const [isPending, startTransition] = useTransition();
+   const { user } = useUser();
 
    const onAction = async (formData: FormData) => {
       const file = formData.get("file") as File;
@@ -44,22 +34,34 @@ const UploadForm = ({ planTypeName }: Props) => {
          });
       }
 
+      const MAX_FILE_SIZE = 10 * 1024 * 1024;
+      if (file.size > MAX_FILE_SIZE) {
+         toast.error("File size exceeds the max limit of 10MB", {
+            description: "Please try again with a smaller file",
+         });
+         return;
+      }
+
       if (!file) return;
 
-      const resp = (await startUpload([file])) as unknown as {
-         serverData: { userId: string; fileUrl: string };
-      }[];
-      const result = await onTranscribeFile(resp);
-      const { data = null, message = null } = result || {};
+      toast.message("Generating AI blog post...", {
+         description: "Please wait while we generate your blog post. ✨",
+      });
 
-      if (!resp) {
-         toast.error("Something went wrong", {
-            description: "Please use a different file",
-         });
-      }
-      toast.info("Transcription is in progress...", {
-         description:
-            "Hang tight! Our digital wizards are sprinkling magic dust on your file! ✨",
+      startTransition(async () => {
+         try {
+            const { data } = await onTranscribeFileWithGemini(file);
+            if (!data) return;
+
+            await onGenerateBlogPostAction(data.transcription, user?.id || "");
+
+            toast.message("🎉 Woohoo! Your AI blog is created! 🎊", {
+               description:
+                  "Time to put on your editor hat, Click the post and edit it!",
+            });
+         } catch (error) {
+            console.error("Error occurred", error);
+         }
       });
    };
 
@@ -85,7 +87,7 @@ const UploadForm = ({ planTypeName }: Props) => {
                   required
                   className="cursor-pointer"
                />
-               <Button disabled={isUploading}>Transcribe</Button>
+               <Button disabled={isPending || !user?.id}>Transcribe</Button>
             </div>
          </form>
       </>

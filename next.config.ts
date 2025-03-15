@@ -32,6 +32,11 @@ const webpack = (config: any) => {
 const nextConfig: NextConfig = {
    /* config options here */
    reactStrictMode: false,
+   experimental: {
+      serverActions: {
+         bodySizeLimit: "10mb",
+      },
+   },
    webpack(config) {
       // Grab the existing rule that handles SVG imports
       // biome-ignore lint/suspicious/noExplicitAny: <explanation>

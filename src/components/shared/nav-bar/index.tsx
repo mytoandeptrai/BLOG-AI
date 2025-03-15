@@ -144,7 +144,7 @@ const Navbar: FCC = () => {
                            <Link
                               href={
                                  pathname === "/dashboard"
-                                    ? "/posts"
+                                    ? "/blogs"
                                     : "/dashboard"
                               }
                               className={`${buttonVariants({
@@ -152,7 +152,7 @@ const Navbar: FCC = () => {
                               })} font-semibold`}
                            >
                               {pathname === "/dashboard"
-                                 ? "Your Posts"
+                                 ? "Your Blogs"
                                  : "Upload a video"}
                            </Link>
                            <UserButton />
