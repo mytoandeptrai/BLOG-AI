@@ -5,6 +5,13 @@ import onDbConnection from "@/lib/db";
 import { MaxWidthContainer } from "@/components/global";
 import { BlogHeader, BlogContent } from "./_components";
 import type { IPost } from "@/types/post.type";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+   title: "Your Blogs",
+   description:
+      "Browse and manage your personal blog posts. Create, edit, and share content with your audience to enhance engagement and visibility.",
+};
 
 const onGetBlogs = async (userId: string): Promise<IPost[]> => {
    const sql = await onDbConnection();

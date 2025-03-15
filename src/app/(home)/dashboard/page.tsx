@@ -4,7 +4,14 @@ import { VStack } from "@/components/ui/v-stack";
 import onDbConnection from "@/lib/db";
 import { onCreateUser } from "@/lib/user-db";
 import { currentUser } from "@clerk/nextjs/server";
+import type { Metadata } from "next";
 import { redirect } from "next/navigation";
+
+export const metadata: Metadata = {
+   title: "Dashboard",
+   description:
+      "Manage your audio transcription process here. Upload audio files to transcribe them into text, making your content more SEO-friendly and accessible.",
+};
 
 const DashboardPage = async () => {
    const clerkUser = await currentUser();

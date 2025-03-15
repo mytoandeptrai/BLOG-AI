@@ -1,7 +1,7 @@
 "use client";
 
+import { onTranscribeFileWithGemini } from "@/actions/ai-generate-action";
 import { onGenerateBlogPostAction } from "@/actions/post-action";
-import { onTranscribeFileWithGemini } from "@/actions/upload-action";
 import schema from "@/app/(home)/dashboard/_components/upload-form/schema";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

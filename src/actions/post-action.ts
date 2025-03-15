@@ -2,6 +2,7 @@
 
 import { generateBlogPostWithGemini } from "@/actions/ai-generate-action";
 import onDbConnection from "@/lib/db";
+import { currentUser } from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
@@ -59,12 +60,35 @@ export async function onGenerateBlogPostAction(
 
    revalidatePath(`/blogs/${existedPostId}`);
    redirect(`/blogs/${existedPostId}`);
+}
 
-   return {
-      success: true,
-      message: "Blog post generated successfully",
-      data: {
-         postId: existedPostId,
-      },
-   };
+export async function onUpdatePost(payload: {
+   postId: number;
+   content: string;
+}) {
+   const { postId, content } = payload;
+   const user = await currentUser();
+   if (!user) {
+      redirect("/sign-in");
+   }
+
+   try {
+      const sql = await onDbConnection();
+      const [title, ...contentParts] = content?.split("\n\n") || [];
+      let updatedTitle = title;
+      if (title.includes("#")) {
+         updatedTitle = title.split("#")[1].trim();
+      }
+
+      await sql`UPDATE posts SET content = ${content}, title = ${updatedTitle} where id = ${postId}`;
+      revalidatePath(`/blogs/${postId}`);
+      return {
+         success: true,
+      };
+   } catch (error) {
+      console.log(error);
+      return {
+         success: false,
+      };
+   }
 }
