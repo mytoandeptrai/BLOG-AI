@@ -4,7 +4,6 @@ import onDbConnection from "@/lib/db";
 import type { IPost } from "@/types/post.type";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
-import type { Metadata } from "next";
 import { cache } from "react";
 
 const onGetBlog = async (id: string, userId: string): Promise<IPost[]> => {
@@ -17,9 +16,7 @@ const onGetBlog = async (id: string, userId: string): Promise<IPost[]> => {
    return blog as IPost[];
 };
 
-type Props = {
-   params: { id: string };
-};
+type Params = Promise<{ id: string }>;
 
 const getBlogData = cache(async (id: string) => {
    const user = await currentUser();
@@ -29,7 +26,7 @@ const getBlogData = cache(async (id: string) => {
    return { blog, user };
 });
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Params }) {
    const { id } = await params;
    const { blog } = await getBlogData(id);
 
@@ -42,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
    };
 }
 
-const BlogDetailPage = async ({ params }: Props) => {
+const BlogDetailPage = async ({ params }: { params: Params }) => {
    const { id } = await params;
    const { blog, user } = await getBlogData(id);
 
