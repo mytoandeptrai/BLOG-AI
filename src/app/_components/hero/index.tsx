@@ -46,7 +46,7 @@ const HeroSection: FCC<Props> = ({ user }) => {
                </button>
                <TextTyping
                   as={"h1"}
-                  text="AI-Powered Blogs With Media..."
+                  text="AI-Driven Blogs with Media Integration..."
                   className="bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-transparent"
                />
                <p className="mb-12 text-balance text-lg text-muted-foreground tracking-tight md:text-xl">
