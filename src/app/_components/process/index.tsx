@@ -13,10 +13,10 @@ const ProcessSection: FCC<Props> = (props) => {
             <div className="mx-auto flex w-full max-w-xl flex-col items-center justify-center py-8 lg:items-center">
                <MagicBadge title="The Process" />
                <h2 className="!leading-[1.1] mt-6 text-center font-heading font-medium text-3xl text-foreground md:text-5xl lg:text-center">
-                  Generate content effortlessly in 3 steps
+                  Create content effortlessly in 3 simple steps
                </h2>
                <p className="mt-4 max-w-lg text-center text-lg text-muted-foreground lg:text-center">
-                  Easily repurpose your content into SEO focused blog posts
+                  Quickly transform your content into SEO-optimized blog posts.
                </p>
             </div>
          </AnimationContainer>

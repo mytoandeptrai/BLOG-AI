@@ -50,11 +50,11 @@ const HeroSection: FCC<Props> = ({ user }) => {
                   className="bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-transparent"
                />
                <p className="mb-12 text-balance text-lg text-muted-foreground tracking-tight md:text-xl">
-                  Create high-quality blog posts with videos,
+                  Make high-quality web journal posts with recordings,
                   <br className="hidden md:block" />
                   <span className="hidden md:block">
-                     customize content, and export in Markdown format
-                     effortlessly!
+                     customize substance, and send out in Markdown organize
+                     easily!
                   </span>
                </p>
                <HStack
@@ -68,7 +68,7 @@ const HeroSection: FCC<Props> = ({ user }) => {
                         href={user ? "/dashboard" : "/sign-in"}
                         className="flex items-center"
                      >
-                        Start creating for free
+                        Begin creating at no cost.
                         <Icons.arrowRight
                            width={16}
                            height={16}

@@ -2,26 +2,26 @@ export const PLAN_MONTHLY_LIST = [
    {
       id: "basic",
       name: "Basic",
-      info: "For most individuals",
+      info: "Ideal for individual users",
       price: {
          monthly: 7,
          yearly: Math.round(7 * 12 * (1 - 0.12)),
       },
       features: [
-         { text: "Up to 3 Blog posts", limit: "100 tags" },
-         { text: "Up to 3 Transcriptions" },
-         { text: "Up to 3 Posts stored" },
+         { text: "Up to 3 blog posts", limit: "100 tags" },
+         { text: "Up to 3 transcriptions" },
+         { text: "Up to 3 posts stored" },
          {
             text: "Markdown support",
-            tooltip: "Export content in Markdown format",
+            tooltip: "Export your content as Markdown files",
          },
          {
-            text: "Community support",
-            tooltip: "Get answers your questions on discord",
+            text: "Community assistance",
+            tooltip: "Get support from the community on Discord",
          },
          {
-            text: "AI powered suggestions",
-            tooltip: "Get up to 100 AI powered suggestions",
+            text: "AI-driven recommendations",
+            tooltip: "Receive up to 100 AI-generated suggestions",
          },
       ],
       btn: {
@@ -34,24 +34,24 @@ export const PLAN_MONTHLY_LIST = [
    {
       id: "pro",
       name: "Pro",
-      info: "For small businesses",
+      info: "Best for small businesses",
       price: {
          monthly: 17.99,
          yearly: Math.round(17.99 * 12 * (1 - 0.12)),
       },
       features: [
-         { text: "Up to 500 Blog Posts", limit: "500 tags" },
-         { text: "Up to 500 Transcriptions" },
-         { text: "Up to 500 Posts stored" },
+         { text: "Up to 500 blog posts", limit: "500 tags" },
+         { text: "Up to 500 transcriptions" },
+         { text: "Up to 500 posts stored" },
          {
             text: "Unlimited Markdown support",
-            tooltip: "Export content in Markdown format",
+            tooltip: "Export your content as Markdown files",
          },
          { text: "SEO optimization tools" },
-         { text: "Priority support", tooltip: "Get 24/7 chat support" },
+         { text: "Priority support", tooltip: "Access 24/7 chat support" },
          {
-            text: "AI powered suggestions",
-            tooltip: "Get up to 500 AI powered suggestions",
+            text: "AI-driven recommendations",
+            tooltip: "Receive up to 500 AI-powered suggestions",
          },
       ],
       btn: {
@@ -63,24 +63,24 @@ export const PLAN_MONTHLY_LIST = [
    },
    {
       name: "Business",
-      info: "For large organizations",
+      info: "Tailored for large organizations",
       price: {
          monthly: 69.99,
          yearly: Math.round(49.99 * 12 * (1 - 0.12)),
       },
       features: [
-         { text: "Unlimited Blog Posts", tooltip: undefined },
-         { text: "Unlimited Transcriptions", tooltip: undefined },
-         { text: "Unlimited Posts stored", tooltip: undefined },
+         { text: "Unlimited blog posts", tooltip: undefined },
+         { text: "Unlimited transcriptions", tooltip: undefined },
+         { text: "Unlimited posts stored", tooltip: undefined },
          { text: "Unlimited Markdown support", tooltip: undefined },
          {
             text: "SEO optimization tools",
-            tooltip: "Advanced SEO optimization tools",
+            tooltip: "Advanced SEO optimization tools included",
          },
-         { text: "Priority support", tooltip: "Get 24/7 chat support" },
+         { text: "Priority support", tooltip: "24/7 chat support available" },
          {
-            text: "AI powered suggestions",
-            tooltip: "Get up to 500 AI powered suggestions",
+            text: "AI-driven recommendations",
+            tooltip: "Receive up to 500 AI-powered suggestions",
          },
       ],
       btn: {
@@ -94,30 +94,30 @@ export const PLAN_MONTHLY_LIST = [
 export const PRICING_FEATURES = [
    {
       text: "Shorten links",
-      tooltip: "Create shortened links",
+      tooltip: "Generate shortened versions of your links",
    },
    {
       text: "Track clicks",
-      tooltip: "Track clicks on your links",
+      tooltip: "Monitor the number of clicks on your links",
    },
    {
       text: "See top countries",
-      tooltip: "See top countries where your links are clicked",
+      tooltip: "View the countries with the most clicks on your links",
    },
    {
       text: "Upto 10 tags",
-      tooltip: "Add upto 10 tags to your links",
+      tooltip: "Assign up to 10 tags to your links",
    },
    {
       text: "Community support",
-      tooltip: "Community support is available for free users",
+      tooltip: "Free users can access support from the community",
    },
    {
       text: "Priority support",
-      tooltip: "Get priority support from our team",
+      tooltip: "Receive priority assistance from our team",
    },
    {
       text: "AI powered suggestions",
-      tooltip: "Get AI powered suggestions for your links",
+      tooltip: "Receive smart suggestions powered by AI for your links",
    },
 ] as const;

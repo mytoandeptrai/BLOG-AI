@@ -14,7 +14,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
    title: "Pricing",
    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, deleniti!",
+      "Discover our simple and clear pricing plans, tailored to suit your needs.",
 };
 
 const PricingPage = () => {
@@ -29,10 +29,10 @@ const PricingPage = () => {
             >
                <MagicBadge title="Pricing" />
                <h2 className="!leading-[1.1] mt-6 text-center font-heading font-medium text-2xl text-foreground md:text-5xl lg:text-center">
-                  Simple and transparent pricing
+                  Clear and straightforward pricing
                </h2>
                <p className="mt-6 max-w-lg text-center text-lg text-muted-foreground lg:text-center">
-                  Choose a suitable plan that works for you. No hidden fees. No
+                  Select a plan that fits your needs. No hidden costs, no
                   surprises.
                </p>
             </VStack>
@@ -49,12 +49,11 @@ const PricingPage = () => {
                   className="w-full pt-12"
                >
                   <h2 className="mt-6 text-center font-semibold text-2xl lg:text-3xl xl:text-4xl">
-                     Frequently Asked Questions
+                     Common Questions
                   </h2>
                   <p className="mt-6 max-w-lg text-center text-neutral-500">
-                     Here are some of the most common questions we get asked. If
-                     you have a question that isn&apos;t answered here, feel
-                     free to reach out to us.
+                     Here are some of the most frequently asked questions. If
+                     you have any other inquiries, don’t hesitate to reach out.
                   </p>
                </VStack>
                <div className="mx-auto mt-20 w-full max-w-3xl">

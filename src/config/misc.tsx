@@ -42,7 +42,7 @@ export const FEATURES_LIST = [
          />
       ),
       name: "Blog posts",
-      description: "Create blog posts that are easy to remember and share.",
+      description: "Craft blog posts that are simple to recall and share.",
       href: "#",
       cta: "Learn more",
       background: (
@@ -50,7 +50,7 @@ export const FEATURES_LIST = [
             <CardHeader>
                <CardTitle>Create blog posts</CardTitle>
                <CardDescription>
-                  Create blog posts that are easy to remember and share.
+                  Craft blog posts that are simple to recall and share.
                </CardDescription>
             </CardHeader>
             <CardContent className="-mt-4">
@@ -74,7 +74,7 @@ export const FEATURES_LIST = [
       ),
       name: "Search your blogs",
       description:
-         "Quickly generate the blog posts you need with AI-powered search.",
+         "Rapidly produce the blog posts you require using AI-driven search.",
       href: "#",
       cta: "Learn more",
       background: (
@@ -82,22 +82,22 @@ export const FEATURES_LIST = [
             <Input placeholder="Type to search..." />
             <div className="mt-1 cursor-pointer">
                <div className="rounded-md px-4 py-2 hover:bg-muted">
-                  Writora.xyz/hdf00c
+                  Michael handsome boy/hdf00c
                </div>
                <div className="rounded-md px-4 py-2 hover:bg-muted">
-                  Writora.xyz/sdv0n0
+                  Michael handsome boy/sdv0n0
                </div>
                <div className="rounded-md px-4 py-2 hover:bg-muted">
-                  Writora.xyz/03gndo
+                  Michael handsome boy/03gndo
                </div>
                <div className="rounded-md px-4 py-2 hover:bg-muted">
-                  Writora.xyz/09vmmw
+                  Michael handsome boy/09vmmw
                </div>
                <div className="rounded-md px-4 py-2 hover:bg-muted">
-                  Writora.xyz/s09vws
+                  Michael handsome boy/s09vws
                </div>
                <div className="rounded-md px-4 py-2 hover:bg-muted">
-                  Writora.xyz/sd8fv5
+                  Michael handsome boy/sd8fv5
                </div>
             </div>
          </Command>
@@ -112,7 +112,7 @@ export const FEATURES_LIST = [
          />
       ),
       name: "Connect your apps",
-      description: "Integrate with your favorite apps and services.",
+      description: "Connect seamlessly with the apps and services you love.",
       href: "#",
       cta: "Learn more",
       background: (
@@ -128,7 +128,7 @@ export const FEATURES_LIST = [
          />
       ),
       name: "Calendar picker",
-      description: "Keep track of your blog posts with our calendar view.",
+      description: "Monitor your blog posts using our intuitive calendar view.",
       href: "#",
       cta: "Learn more",
       background: (
@@ -145,7 +145,7 @@ export const PROCESS_LIST = [
    {
       title: "Upload Your Video",
       description:
-         "Easily categorize the scripts and optimize the media to create high-quality blog posts.",
+         "Effortlessly organize your scripts and enhance the media to produce top-notch blog posts.",
       Icon: (
          <Icons.upload
             width={36}
@@ -158,7 +158,7 @@ export const PROCESS_LIST = [
    {
       title: "AI Magic",
       description:
-         "Create SEO-optimized blog posts that are easy to customize and share.",
+         "Generate SEO-friendly blog posts that are simple to tailor and share.",
       Icon: (
          <Icons.pencil
             width={36}
@@ -171,7 +171,7 @@ export const PROCESS_LIST = [
    {
       title: "Optimize and Export",
       description:
-         "Content is provided in Markdown format and can be easily exported.",
+         "The content is available in Markdown format, making it easy to export.",
       Icon: (
          <Icons.scrollText
             width={36}
@@ -185,75 +185,75 @@ export const PROCESS_LIST = [
 
 export const REVIEW_LIST = [
    {
-      name: "Michael Smith",
-      username: "@michaelsmith",
+      name: "Michael Tran",
+      username: "@michaelTran",
       avatar: "https://randomuser.me/api/portraits/men/1.jpg",
       rating: 5,
       review:
-         "This app is fantastic! It offers everything I need to manage my blog contents efficiently.",
+         "This app is amazing! It provides all the tools I need to organize and manage my blog content smoothly.",
    },
    {
-      name: "Emily Johnson",
-      username: "@emilyjohnson",
+      name: "Emily Tran",
+      username: "@emilyTran",
       avatar: "https://randomuser.me/api/portraits/women/1.jpg",
       rating: 4,
       review:
-         "This platform saved us time and improved our content quality. The AI suggestions are incredibly helpful!”",
+         "This platform has been a real time-saver and has boosted the quality of our content. The AI recommendations are extremely useful!",
    },
    {
-      name: "Daniel Williams",
-      username: "@danielwilliams",
+      name: "Daniel Tran",
+      username: "@danielTran",
       avatar: "https://randomuser.me/api/portraits/men/2.jpg",
       rating: 5,
       review:
-         "I've been using this app daily for months. The insights and analytics it provides are invaluable. Highly recommend it!",
+         "I've been using this app every day for months. The insights and analytics it offers are priceless. I highly recommend it!",
    },
    {
-      name: "Sophia Brown",
-      username: "@sophiabrown",
+      name: "Sophia Tran",
+      username: "@sophiaTran",
       avatar: "https://randomuser.me/api/portraits/women/2.jpg",
       rating: 4,
       review:
-         "Great app with a lot of potential. It has already saved me a lot of time. Looking forward to future updates and improvements.",
+         "Fantastic app with so much potential. It's already saved me a great deal of time. I’m excited for future updates and enhancements",
    },
    {
-      name: "James Taylor",
-      username: "@jamestaylor",
+      name: "James Tran",
+      username: "@jamesTran",
       avatar: "https://randomuser.me/api/portraits/men/3.jpg",
       rating: 5,
       review:
-         "Absolutely love this app! It's intuitive and feature-rich. Has significantly improved how I manage and create content.",
+         "I absolutely adore this app! It's easy to use and packed with features. It has greatly enhanced how I manage and produce content.",
    },
    {
-      name: "Olivia Martinez",
-      username: "@oliviamartinez",
+      name: "Olivia Tran",
+      username: "@oliviaTran",
       avatar: "https://randomuser.me/api/portraits/women/3.jpg",
       rating: 4,
       review:
-         "This app is a game-changer for generate posts. It's easy to use, extremely powerful and highly recommended!",
+         "This app is a total game-changer for post generation. It’s simple to use, very powerful, and I highly recommend it!",
    },
    {
-      name: "William Garcia",
-      username: "@williamgarcia",
+      name: "William Tran",
+      username: "@williamTran",
       avatar: "https://randomuser.me/api/portraits/men/4.jpg",
       rating: 5,
       review:
-         "Effortless blogging with amazing SEO tools. This platform made our content strategy more effective.",
+         "Blogging has never been easier thanks to the amazing SEO tools. This platform has made our content strategy much more effective.",
    },
    {
-      name: "Mia Rodriguez",
-      username: "@miarodriguez",
+      name: "Mia Tran",
+      username: "@miaTran",
       avatar: "https://randomuser.me/api/portraits/women/4.jpg",
       rating: 4,
       review:
-         "I've tried several content generator tools, but this one stands out. It's simple, effective.",
+         "I've tested multiple content generation tools, but this one really stands out. It’s straightforward and efficient.",
    },
    {
-      name: "Henry Lee",
-      username: "@henrylee",
+      name: "Henry Tran",
+      username: "@henryTran",
       avatar: "https://randomuser.me/api/portraits/men/5.jpg",
       rating: 5,
       review:
-         "This app has transformed my workflow. Managing and analyzing links is now a breeze. I can't imagine working without it.",
+         "This app has revolutionized my workflow. Managing and analyzing links has become effortless. I can’t imagine working without it.",
    },
 ] as const;

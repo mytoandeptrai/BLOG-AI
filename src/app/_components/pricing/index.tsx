@@ -21,10 +21,10 @@ const PricingSection: FCC<Props> = (props) => {
             >
                <MagicBadge title="Simple Pricing" />
                <h2 className="!leading-[1.1] mt-6 text-center font-heading font-medium text-3xl text-foreground md:text-5xl lg:text-center">
-                  Choose a plan that works for you
+                  Select the plan that suits you best.
                </h2>
                <p className="mt-4 max-w-lg text-center text-lg text-muted-foreground lg:text-center">
-                  Get started with Blog AI today and enjoy more features with
+                  Start using Blog AI today and unlock additional features with
                   our pro plans.
                </p>
             </VStack>

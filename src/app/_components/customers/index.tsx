@@ -26,10 +26,10 @@ const CustomersSection: FCC = () => {
             >
                <MagicBadge title="Our Customers" />
                <h2 className="!leading-[1.1] mt-6 text-center font-heading font-medium text-3xl text-foreground md:text-5xl lg:text-center">
-                  What our users are saying
+                  Here's what our users are saying.
                </h2>
                <p className="mt-4 max-w-lg text-center text-lg text-muted-foreground lg:text-center">
-                  Here&apos;s what some of our users have to say about Blog AI.
+                  Here&apos;s what a few of our users have to say about Blog AI.
                </p>
             </VStack>
          </AnimationContainer>

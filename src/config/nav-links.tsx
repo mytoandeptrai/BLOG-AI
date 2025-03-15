@@ -7,7 +7,7 @@ export const NAV_LINKS = [
       menu: [
          {
             title: "SEO Strategy",
-            tagline: "SEO optimization and track their performance.",
+            tagline: "Optimize for SEO and monitor their performance.",
             href: "/features/seo-strategy",
             icon: (
                <Icons.link
@@ -18,7 +18,7 @@ export const NAV_LINKS = [
          },
          {
             title: "Password Protection",
-            tagline: "Secure your blogs with a password.",
+            tagline: "Protect your blogs with password security.",
             href: "/features/password-protection",
             icon: (
                <Icons.lock
@@ -29,7 +29,7 @@ export const NAV_LINKS = [
          },
          {
             title: "Advanced Analytics",
-            tagline: "Gain insights into who is clicking your posts.",
+            tagline: "Discover who is engaging with your posts.",
             href: "/features/analytics",
             icon: (
                <Icons.lineChart
@@ -40,7 +40,7 @@ export const NAV_LINKS = [
          },
          {
             title: "Custom QR Codes",
-            tagline: "Use QR codes to reach your audience.",
+            tagline: "Leverage QR codes to connect with your audience.",
             href: "/features/qr-codes",
             icon: (
                <Icons.qr
@@ -65,7 +65,7 @@ export const NAV_LINKS = [
       menu: [
          {
             title: "Blog",
-            tagline: "Read articles on the latest trends in tech.",
+            tagline: "Stay updated with articles about the latest tech trends.",
             href: "/resources/blog",
             icon: (
                <Icons.noteBook
@@ -76,7 +76,7 @@ export const NAV_LINKS = [
          },
          {
             title: "Help",
-            tagline: "Get answers to your questions.",
+            tagline: "Find solutions to your queries.",
             href: "/resources/help",
             icon: (
                <Icons.helpCircle
