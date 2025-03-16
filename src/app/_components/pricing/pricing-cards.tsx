@@ -56,7 +56,7 @@ const PricingCards = () => {
       ],
       btn: {
          text: "Get started",
-         href: "https://buy.stripe.com/test_cN26qF9dg9yI9YQ3ci",
+         href: "/",
          variant: "purple",
       },
       priceId: process.env.STRIPE_PRICE_ID_PRO_PLAN,
