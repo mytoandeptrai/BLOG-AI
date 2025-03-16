@@ -26,7 +26,7 @@ export const PLAN_MONTHLY_LIST = [
       ],
       btn: {
          text: "Start Your Free Trial",
-         href: "https://buy.stripe.com/test_eVadT70GKh1ac6Y005",
+         href: "/",
          variant: "default",
       },
       priceId: process.env.STRIPE_PRICE_ID_BASIC_PLAN,

@@ -28,39 +28,7 @@ type Tab = "monthly" | "yearly";
 
 const PricingCards = () => {
    const MotionTabTrigger = motion(TabsTrigger);
-
    const [activeTab, setActiveTab] = useState<Tab>("monthly");
-
-   const plan = {
-      id: "pro",
-      name: "Pro",
-      info: "For small businesses",
-      price: {
-         monthly: 17.99,
-         yearly: Math.round(17.99 * 12 * (1 - 0.12)),
-      },
-      features: [
-         { text: "Up to 500 Blog Posts", limit: "500 tags" },
-         { text: "Up to 500 Transcriptions" },
-         { text: "Up to 500 Posts stored" },
-         {
-            text: "Unlimited Markdown support",
-            tooltip: "Export content in Markdown format",
-         },
-         { text: "SEO optimization tools" },
-         { text: "Priority support", tooltip: "Get 24/7 chat support" },
-         {
-            text: "AI powered suggestions",
-            tooltip: "Get up to 500 AI powered suggestions",
-         },
-      ],
-      btn: {
-         text: "Get started",
-         href: "/",
-         variant: "purple",
-      },
-      priceId: process.env.STRIPE_PRICE_ID_PRO_PLAN,
-   };
 
    return (
       <Tabs
