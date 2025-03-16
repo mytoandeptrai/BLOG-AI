@@ -32,7 +32,7 @@ To request a feature open a [GitHub issue](https://github.com/mytoandeptrai/BLOG
 
  ## Contribution Guidelines
 
-Thank you for considering contributing to our AI-powered blog generator project! Please follow these guidelines to ensure smooth collaboration:
+Thank you for considering contributing to my blog generator project! Please follow these guidelines to ensure smooth collaboration:
 
 1. Fork the repository to your GitHub account.
 2. Clone the forked repository to your local machine:
