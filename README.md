@@ -5,7 +5,7 @@
 - 📝 Blog Post Generation: Automatically generate blog posts based on audio or video transcriptions.
 - 🎙️ Audio and video file processing (up to 10MB)
 - 💾 Database Management: Efficient data management with NeonDb.
-- 📤 File Uploads: Seamless file uploads using UploadThing ( Still processing ).
+- 📤 File Uploads: Seamless file uploads with UploadThing ( Still processing ).
 - 🖋️ Markdown Editor: Edit your blog posts with a built-in Markdown editor.
 - 💅 TailwindCSS for styling
 - 🔒 Secure file handling and processing
